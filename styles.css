@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+    --bg:hsl hsl(185, 41%, 84%);
+    --bgg:hsl(189, 41%, 97%);
+    --bgcalc:hsl(183, 100%, 15%);
+    --dgcyan:hsl(186, 14%, 43%);
+    --gscyan:hsl(184, 14%, 56%);
+    --bgcyan:hsl(185, 41%, 84%);
+    --inputcyan:hsl(189, 41%, 97%);
+
+    --fontS:hsl(172, 67%, 45%);
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bgcyan);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Space Mono', monospace;
+}
+
+.container{
+    margin-top: 6rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.title{
+    position: absolute;
+    top: -6rem;
+    background-color: rgba(127, 255, 212, 0);
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bolder;
+    letter-spacing: .3rem;
+    font-size: 1.5rem;
+    color: var(--dgcyan);
+}
+
+.white-area{
+    background-color: rgba(102, 51, 153, 0);
+    padding: .5rem;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.input-box input[type="tel"]{
+    padding: .5rem;
+    border-radius: .2rem;
+    border: none;
+    margin-top: .2rem;
+    text-align: end;
+    width: 100%;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    background-color: var(--inputcyan);
+    font-weight: bolder;
+    color: var(--bgcalc);
+}
+
+input[type="tel"]:focus{
+    outline: 2px solid var(--fontS);
+}
+
+.input-inside-box{
+    background-color: rgba(255, 0, 0, 0);
+    position: relative;
+}
+
+.input-inside-box i{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-40%);
+}
+
+label{
+    font-weight: bold;
+    color: var(--dgcyan);
+}
+
+input[type="tel"].erro{
+    outline: 2px solid red;
+}
+
+.input-inside-box span{
+    opacity: 1;
+    position: absolute;
+    top: -1.2rem;
+    right: 0;
+    font-size: small;
+    color: red;
+}
+
+.select-tip-area{
+    margin: 1rem 0;
+}
+
+.select-tip{
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    background-color: rgba(127, 255, 212, 0);
+    gap: 1rem;
+}
+
+.tip-btn{
+    padding: .5rem;
+    text-align: center;
+    background-color: var(--bgcalc);
+    color: white;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: .3s ease;
+}
+
+.custom-btn{
+    border-radius: .3rem;
+    border: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    background-color: var(--inputcyan);
+    font-weight: bolder;
+    color: var(--bgcalc);
+    text-align: center;
+}
+
+.tip-btn:hover{
+    background-color: var(--bgcyan);
+    color: var(--bgcalc);
+}
+
+.tip-btn.selected{
+    background-color: var(--fontS);
+    color: var(--bgcalc);
+}
+
+.cyan-area{
+    background-color: var(--bgcalc);
+    padding: 1rem;
+    color: white;
+    margin-top: 1rem;
+    border-radius: .7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cyan-area h1{
+    color: var(--fontS);
+}
+
+.tip-amount,.total-amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cyan-area small{
+    color: rgba(255, 255, 255, 0.459);
+}
+
+.cyan-area button{
+    padding:.5rem 1rem;
+    border-radius: .2rem;
+    border: none;
+    background-color: var(--fontS);
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.cyan-area button:hover{
+    background-color: var(--bgcyan);
+}
+
+.hide{
+    display: none;
+}
+
+@media only screen and (min-width: 900px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        max-width: 900px;
+        padding: 2rem;
+    }
+
+    .select-tip-area{
+        background-color: rgba(255, 0, 0, 0);
+    }
+
+    .select-tip{
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        gap:.4rem 2%;
+    }
+
+    .cyan-area{
+        margin-top: 0;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .cyan-area h1{
+        font-size: 2.5rem;
+    }
+
+    .cyan-area button{
+        padding: .8rem;
+    }
+}

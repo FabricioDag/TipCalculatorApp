@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Fabricio DG | Tip calculator app</title>
+  <script src="/tip-calculator-app-main/tip-calculator-app-main/scripts.js" defer></script>
+  
+</head>
+<body>
+
+  <main class="container">
+    <span class="title">SPLI<br>TTER</span>
+    <section class="white-area">
+
+      <div class="input-box">
+        <label for="bill">Bill</label>
+        <div class="input-inside-box">
+          <input id="inputBill" type="tel" name="bill" placeholder="0">
+          <i><img src="images/icon-dollar.svg" alt=""></i>
+        </div>
+      </div>
+
+      <div class="select-tip-area">
+        <p>Select Tip %</p>
+        <div class="select-tip">
+          <div class="tip-btn">5%</div>
+          <div class="tip-btn">10%</div>
+          <div class="tip-btn ">15%</div>
+          <div class="tip-btn">25%</div>
+          <div class="tip-btn">50%</div>
+          <input id="inputCustom" type="tel" class="custom-btn" placeholder="Custom"/>
+          
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label for="noPeople">Number of People</label>
+        <div class="input-inside-box">
+          <input id="inputPeople" class="" type="tel" name="noPeople" placeholder="0">
+          <i><img src="images/icon-person.svg" alt=""></i>
+          <span id="error" class="error hide">Can't be zero</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cyan-area">
+      <div class="top-area">
+        <div class="tip-amount">
+          <div class="text">
+            <p>Tip Amount</p>
+            <small>/ person</small>
+          </div>
+          <h1 id="idTipAmount"><span>$</span>0.00</h1>
+        </div>
+
+        <div class="total-amount">
+          <div class="text">
+            <p>Total</p>
+            <small>/ person</small>
+          </div>
+          <h1 id="idTotalAmount"><span>$</span>0.00</h1>
+        </div>
+     </div>
+
+      <button onclick="reset()" id="resetBtn" class="reset-btn">Reset</button>
+
+    </section>
+
+  </main>
+  
+</body>
+</html>
